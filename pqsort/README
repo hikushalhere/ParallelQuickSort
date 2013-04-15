@@ -1,0 +1,406 @@
+================
+Kushal Lakhotia 
+================
+
+=======================================================================================================
+Serial time against which the speedups were calculated: 4028247 micro-seconds 
+=======================================================================================================
+Maximum Speedup Achieved: 5.01 for 10 million numbers sorted with 14 threads.
+=======================================================================================================
+In general the speedup is greater than 4x for 6 or more threads for sorting 10 million numbers.
+=======================================================================================================
+The exact speedups for sorting 10 million numbers with 1-64 threads were recorded and are pasted below.
+=======================================================================================================
+
+mc09 72 $ bash run.sh
+make: Nothing to be done for `all'.
+rm generate pqsort.o run
+gcc -o generate generate.c
+gcc -c -lm -lpthread pqsort.c
+gcc -o run driver.c pqsort.o -lm -lpthread
+n = 10000000
+1
+
+Time taken (in micro-secs): 4023234
+
+Speedup: 1.002125
+============= SORTED ===========
+2
+
+Time taken (in micro-secs): 2240500
+
+Speedup: 1.799502
+============= SORTED ===========
+3
+
+Time taken (in micro-secs): 1988115
+
+Speedup: 2.026164
+============= SORTED ===========
+4
+
+Time taken (in micro-secs): 1336196
+
+Speedup: 3.014713
+============= SORTED ===========
+5
+
+Time taken (in micro-secs): 1321047
+
+Speedup: 3.049284
+============= SORTED ===========
+6
+
+Time taken (in micro-secs): 982469
+
+Speedup: 4.100126
+============= SORTED ===========
+7
+
+Time taken (in micro-secs): 895101
+
+Speedup: 4.500327
+============= SORTED ===========
+8
+
+Time taken (in micro-secs): 862853
+
+Speedup: 4.668520
+============= SORTED ===========
+9
+
+Time taken (in micro-secs): 868205
+
+Speedup: 4.639742
+============= SORTED ===========
+10
+
+Time taken (in micro-secs): 831446
+
+Speedup: 4.844869
+============= SORTED ===========
+11
+
+Time taken (in micro-secs): 842698
+
+Speedup: 4.780179
+============= SORTED ===========
+12
+
+Time taken (in micro-secs): 831799
+
+Speedup: 4.842813
+============= SORTED ===========
+13
+
+Time taken (in micro-secs): 860019
+
+Speedup: 4.683905
+============= SORTED ===========
+14
+
+Time taken (in micro-secs): 803604
+
+Speedup: 5.012726
+============= SORTED ===========
+15
+
+Time taken (in micro-secs): 845220
+
+Speedup: 4.765915
+============= SORTED ===========
+16
+
+Time taken (in micro-secs): 861663
+
+Speedup: 4.674968
+============= SORTED ===========
+17
+
+Time taken (in micro-secs): 885044
+
+Speedup: 4.551465
+============= SORTED ===========
+18
+
+Time taken (in micro-secs): 889811
+
+Speedup: 4.527081
+============= SORTED ===========
+19
+
+Time taken (in micro-secs): 842445
+
+Speedup: 4.781614
+============= SORTED ===========
+20
+
+Time taken (in micro-secs): 826899
+
+Speedup: 4.871511
+============= SORTED ===========
+21
+
+Time taken (in micro-secs): 833291
+
+Speedup: 4.834142
+============= SORTED ===========
+22
+
+Time taken (in micro-secs): 841866
+
+Speedup: 4.784903
+============= SORTED ===========
+23
+
+Time taken (in micro-secs): 886765
+
+Speedup: 4.542632
+============= SORTED ===========
+24
+
+Time taken (in micro-secs): 829251
+
+Speedup: 4.857693
+============= SORTED ===========
+25
+
+Time taken (in micro-secs): 858647
+
+Speedup: 4.691389
+============= SORTED ===========
+26
+
+Time taken (in micro-secs): 844860
+
+Speedup: 4.767946
+============= SORTED ===========
+27
+
+Time taken (in micro-secs): 867058
+
+Speedup: 4.645880
+============= SORTED ===========
+28
+
+Time taken (in micro-secs): 858150
+
+Speedup: 4.694106
+============= SORTED ===========
+29
+
+Time taken (in micro-secs): 863699
+
+Speedup: 4.663948
+============= SORTED ===========
+30
+
+Time taken (in micro-secs): 834959
+
+Speedup: 4.824485
+============= SORTED ===========
+31
+
+Time taken (in micro-secs): 843459
+
+Speedup: 4.775866
+============= SORTED ===========
+32
+
+Time taken (in micro-secs): 853050
+
+Speedup: 4.722170
+============= SORTED ===========
+33
+
+Time taken (in micro-secs): 858597
+
+Speedup: 4.691662
+============= SORTED ===========
+34
+
+Time taken (in micro-secs): 875656
+
+Speedup: 4.600262
+============= SORTED ===========
+35
+
+Time taken (in micro-secs): 892357
+
+Speedup: 4.514165
+============= SORTED ===========
+36
+
+Time taken (in micro-secs): 872688
+
+Speedup: 4.615907
+============= SORTED ===========
+37
+
+Time taken (in micro-secs): 861559
+
+Speedup: 4.675532
+============= SORTED ===========
+38
+
+Time taken (in micro-secs): 876510
+
+Speedup: 4.595780
+============= SORTED ===========
+39
+
+Time taken (in micro-secs): 857704
+
+Speedup: 4.696547
+============= SORTED ===========
+40
+
+Time taken (in micro-secs): 873673
+
+Speedup: 4.610703
+============= SORTED ===========
+41
+
+Time taken (in micro-secs): 859137
+
+Speedup: 4.688713
+============= SORTED ===========
+42
+
+Time taken (in micro-secs): 875837
+
+Speedup: 4.599311
+============= SORTED ===========
+43
+
+Time taken (in micro-secs): 896171
+
+Speedup: 4.494954
+============= SORTED ===========
+44
+
+Time taken (in micro-secs): 875851
+
+Speedup: 4.599238
+============= SORTED ===========
+45
+
+Time taken (in micro-secs): 907727
+
+Speedup: 4.437730
+============= SORTED ===========
+46
+
+Time taken (in micro-secs): 869194
+
+Speedup: 4.634462
+============= SORTED ===========
+47
+
+Time taken (in micro-secs): 880744
+
+Speedup: 4.573687
+============= SORTED ===========
+48
+
+Time taken (in micro-secs): 880715
+
+Speedup: 4.573837
+============= SORTED ===========
+49
+
+Time taken (in micro-secs): 900312
+
+Speedup: 4.474279
+============= SORTED ===========
+50
+
+Time taken (in micro-secs): 878782
+
+Speedup: 4.583898
+============= SORTED ===========
+51
+
+Time taken (in micro-secs): 904377
+
+Speedup: 4.454168
+============= SORTED ===========
+52
+
+Time taken (in micro-secs): 878364
+
+Speedup: 4.586079
+============= SORTED ===========
+53
+
+Time taken (in micro-secs): 900810
+
+Speedup: 4.471806
+============= SORTED ===========
+54
+
+Time taken (in micro-secs): 894775
+
+Speedup: 4.501966
+============= SORTED ===========
+55
+
+Time taken (in micro-secs): 886609
+
+Speedup: 4.543431
+============= SORTED ===========
+56
+
+Time taken (in micro-secs): 894718
+
+Speedup: 4.502253
+============= SORTED ===========
+57
+
+Time taken (in micro-secs): 897357
+
+Speedup: 4.489013
+============= SORTED ===========
+58
+
+Time taken (in micro-secs): 927081
+
+Speedup: 4.345087
+============= SORTED ===========
+59
+
+Time taken (in micro-secs): 906217
+
+Speedup: 4.445124
+============= SORTED ===========
+60
+
+Time taken (in micro-secs): 909362
+
+Speedup: 4.429751
+============= SORTED ===========
+61
+
+Time taken (in micro-secs): 919840
+
+Speedup: 4.379291
+============= SORTED ===========
+62
+
+Time taken (in micro-secs): 897526
+
+Speedup: 4.488167
+============= SORTED ===========
+63
+
+Time taken (in micro-secs): 927512
+
+Speedup: 4.343067
+============= SORTED ===========
+64
+
+Time taken (in micro-secs): 923200
+
+Speedup: 4.363352
+============= SORTED ===========
+mc09 73 $

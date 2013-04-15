@@ -1,0 +1,168 @@
+================
+Kushal Lakhotia 
+================
+
+Speedup achieved for sorting 2^22 elements on 1 machine:  6.43
+Speedup achieved for sorting 2^22 elements on 8 machines: 6.33
+The observations from running the program on 8 processors on 1 machine (mc10) is given first and then the ones from running the program on 8 processors on 8 machines (mc01-mc08).
+
+8 processors on 1 machine:
+
+==========================================
+Number of Elements: 1048576 (2^20)
+==========================================
+Serial time: 354303 micro-seconds
+==========================================
+Parallel time: 58411 micro-seconds
+==========================================
+Speedup Achieved: 6.06569 sorted on mc10.
+==========================================
+
+
+==========================================
+Number of Elements: 4194304 (2^22)
+==========================================
+Serial time: 1563076 micro-seconds
+==========================================
+Parallel time: 242940 micro-seconds
+==========================================
+Speedup Achieved: 6.43400 sorted on mc10.
+==========================================
+
+
+==========================================
+Number of Elements: 16777216 (2^24)
+==========================================
+Serial time: 6705263 micro-seconds
+==========================================
+Parallel time: 1080288 micro-seconds
+==========================================
+Speedup Achieved: 6.20692 sorted on mc10.
+==========================================
+
+
+==========================================
+Number of Elements: 33554432 (2^25)
+==========================================
+Serial time: 13813711 micro-seconds
+==========================================
+Parallel time: 2254120 micro-seconds
+==========================================
+Speedup Achieved: 6.12821 sorted on mc10.
+==========================================
+
+
+The log from mc10 is pasted below. For each 'n', the first time to sort is the serial time and the next one is the parallel time.
+
+mc10 52 $ ./run.sh
+make: Nothing to be done for `all'.
+rm generate run validate
+gcc -o generate generate.c
+mpicc -o run -lm driver.c mpiqsort.c
+gcc -o validate validate.c
+n = 1048576
+Time to sort = 354303 micro seconds
+============= SORTED ===========
+n = 1048576
+Time to sort = 58411 micro seconds
+============= SORTED ===========
+n = 4194304
+Time to sort = 1563076 micro seconds
+============= SORTED ===========
+n = 4194304
+Time to sort = 242940 micro seconds
+============= SORTED ===========
+n = 16777216
+Time to sort = 6705263 micro seconds
+============= SORTED ===========
+n = 16777216
+Time to sort = 1080288 micro seconds
+============= SORTED ===========
+n = 33554432
+Time to sort = 13813711 micro seconds
+============= SORTED ===========
+n = 33554432
+Time to sort = 2254120 micro seconds
+============= SORTED ===========
+
+
+
+8 processors on 8 machines:
+
+==============================================
+Number of Elements: 1048576 (2^20)
+==============================================
+Serial time: 358011 micro-seconds
+==============================================
+Parallel time: 64198 micro-seconds
+==============================================
+Speedup Achieved: 5.57667 sorted on mc01-mc08
+==============================================
+
+
+==============================================
+Number of Elements: 4194304 (2^22)
+==============================================
+Serial time: 1553683 micro-seconds
+==============================================
+Parallel time: 245408 micro-seconds
+==============================================
+Speedup Achieved: 6.33102 sorted on mc01-mc08
+==============================================
+
+
+==============================================
+Number of Elements: 16777216 (2^24)
+==============================================
+Serial time: 6730682 micro-seconds
+==============================================
+Parallel time: 1035829 micro-seconds
+==============================================
+Speedup Achieved: 6.49787 sorted on mc01-mc08
+==============================================
+
+
+==============================================
+Number of Elements: 33554432 (2^25)
+==============================================
+Serial time: 13734631 micro-seconds
+==============================================
+Parallel time: 2151263 micro-seconds
+==============================================
+Speedup Achieved: 6.38445 sorted on mc01-mc08
+==============================================
+
+The log from mc12 is pasted below. For each 'n', the first time to sort is the serial time and the next one is the parallel time.
+
+mc12 59 $ ./run.sh 
+gcc -o generate generate.c
+mpicc -o run -lm -lpthread driver.c mpiqsort.c
+gcc -o validate validate.c
+rm generate run validate
+gcc -o generate generate.c
+mpicc -o run -lm -lpthread driver.c mpiqsort.c
+gcc -o validate validate.c
+n = 1048576
+Time to sort = 358011 micro seconds
+============= SORTED ===========
+n = 1048576
+Time to sort = 64198 micro seconds
+============= SORTED ===========
+n = 4194304
+Time to sort = 1553683 micro seconds
+============= SORTED ===========
+n = 4194304
+Time to sort = 245408 micro seconds
+============= SORTED ===========
+n = 16777216
+Time to sort = 6730682 micro seconds
+============= SORTED ===========
+n = 16777216
+Time to sort = 1035829 micro seconds
+============= SORTED ===========
+n = 33554432
+Time to sort = 13734631 micro seconds
+============= SORTED ===========
+n = 33554432
+Time to sort = 2151263 micro seconds
+============= SORTED ===========
